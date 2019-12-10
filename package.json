@@ -1,0 +1,19 @@
+{
+  "name": "sikulijs",
+  "version": "1.0.0",
+  "description": "Visual Test Framework for Sikuli in JS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jsdom": "^15.2.1",
+    "mvdir": "^1.0.17",
+    "opts": "^1.2.7",
+    "pixelmatch": "^5.1.0",
+    "pngjs": "^3.4.0"
+  }
+}

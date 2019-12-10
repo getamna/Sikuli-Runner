@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<style>
+  .data-cell {
+    text-align: center;
+  }
+  .mask-image {
+    filter: brightness(90%);
+  }
+  body {
+    background: black;
+    background-color: black;
+    color: white;
+  }
+  .table-image {
+    padding: 10px;
+  }
+</style>
+
+<div id="header">
+  <h1 id="header">Sikuli Visual Test Results</h1>
+  <p>Here are the Sikuli Test Results and the average image match rate</p>
+  <hr />
+</div>
+
+<div>
+  <h3>Setup - 90%</h3>
+</div>
+
+<div style="display:flex;justify-content: center;">
+  <table height="100%" border="1">
+    <tr>
+      <td>
+        <p class="data-cell"><b>Testcase</b></p>
+      </td>
+
+      <td>
+        <p class="data-cell"><b>Expected</b></p>
+      </td>
+
+      <td>
+        <p class="data-cell"><b>Output</b></p>
+      </td>
+      <td>
+        <p class="data-cell"><b>% Match</b></p>
+      </td>
+    </tr>
+  
+
+    <tr>
+      <td>
+        <p class="data-cell">resize.png</p>
+      </td>
+      <td>
+        <div class="table-image">
+          <img
+            class="mask-image"
+            src="expected/browser/browser-init.png"
+            style="width:550px;height:310px;"
+            alt="description here"
+          />
+        </div>
+      </td>
+
+      <td>
+        <div class="table-image">
+          <img
+            class="mask-image"
+            src="output/init.png"
+            style="width:550px;height:310px;"
+            alt="description here"
+          />
+        </div>
+      </td>
+
+      <td>
+        <p class="data-cell">50%</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <h3>Browser - 50%</h3>
+</div>
+
+<!--  <span
+    <div
+  style="padding:25px;display:flex;flex-direction: row;align-items: center;justify-content: space-between;"
+>
+</div>
+    style="display:flex; align-items: center;justify-content: space-between;"
+  >
+    <button>Prev</button>
+    <p style="margin-left:10px; margin-right:10px;">1 out of 2</p>
+    <button>Next</button>
+  </span> -->

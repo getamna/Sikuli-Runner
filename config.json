@@ -1,0 +1,9 @@
+[
+  {
+    "name": "setup"
+  },
+  {
+    "name": "browser",
+    "tolerance": 80
+  }
+]
