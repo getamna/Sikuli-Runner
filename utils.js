@@ -13,5 +13,19 @@ function writeObjectToFileIfNotExists(filepath, obj){
 }
 
 
+function readDirSortedByTime(directory){
 
-module.exports = {createDirectoryIfNotExists, writeObjectToFileIfNotExists};
+    let fileList = fs.readdirSync(directory);
+    let fileMetadata = []
+    for(let fileName of fileList){
+        let file = {
+            name: fileName,
+            time:  fs.statSync(directory + '/' + fileName).mtime.getTime()
+        }
+        fileMetadata.push(file)
+    }
+
+    return fileMetadata.sort((a,b) => {return a.time - b.time})
+}
+
+module.exports = {createDirectoryIfNotExists, writeObjectToFileIfNotExists, readDirSortedByTime};
