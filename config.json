@@ -4,6 +4,7 @@
   },
   {
     "name": "browser",
+    "diagnostics":["tests/getDiagnosticData.js"],
     "tolerance": 80
   }
 ]

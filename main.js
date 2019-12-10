@@ -10,8 +10,7 @@ const pixelmatch = require('pixelmatch');
 const mvdir = require('mvdir');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-const readlineSync = require('readline-sync');
-
+const alert = require('alert-node')
 
 const { spawnSync, execSync } = require('child_process');
 let { createDirectoryIfNotExists, writeObjectToFileIfNotExists, readDirSortedByTime } = require('./utils')
@@ -199,12 +198,15 @@ for (let directory of orderedListOfTestsToRun) {
         let outputImageList = readDirSortedByTime(testsDirectory + "/output/" + directory.name);
         outputImageList = outputImageList.filter(item => item.name.includes(".png"));
 
+
         for (let image of outputImageList) {
+            //To-DO: Run any Diagnostic Scripts and capture as logs
+            //TO-DO: run the img compare algo and use the config tolerance value or 100
+
             // Append HTML Table Rows Page that Displays Each Testpass Image Outputs with the Match Score
             domDocument.getElementById(`${directory.name}-table`).insertAdjacentHTML('beforeend', generateHTMLTableRow(testsDirectory, directory.name, image.name))
         }
-        //if exists -> run the img compare algo and use the config tolerance value or 100
-
+    
         //Add to Global Results Object
     }
 
@@ -215,7 +217,7 @@ for (let directory of orderedListOfTestsToRun) {
 let outputHTML = dom.serialize();
 fs.writeFileSync("another.html", outputHTML);
 console.log("Wrote a Test Outputs file")
-
+alert('All tests completed! Please check the output html.')
 
 //TO-DO: Add Pass Rate
 function generateHTMLHeader(testpass) {
@@ -235,11 +237,11 @@ function generateHTMLTable(testpass) {
     </td>
 
     <td>
-      <p class="data-cell"><b>Expected</b></p>
+      <p class="data-cell"><b>Output</b></p>
     </td>
 
     <td>
-      <p class="data-cell"><b>Output</b></p>
+      <p class="data-cell"><b>Expected</b></p>
     </td>
     <td>
       <p class="data-cell"><b>% Match</b></p>
@@ -259,7 +261,16 @@ function generateHTMLTableRow(testsDirectory, testpassName, fileName) {
     <td>
       <p class="data-cell">${testName}</p>
     </td>
-
+    <td>
+    <div class="table-image">
+      <img
+        class="mask-image"
+        src="${testsDirectory}/output/${testpassName}/${fileName}"
+        style="width:550px;height:310px;"
+        alt="description here"
+      />
+    </div>
+  </td>
     <td>
       <div class="table-image">
         <img
@@ -270,16 +281,7 @@ function generateHTMLTableRow(testsDirectory, testpassName, fileName) {
         />
       </div>
     </td>
-    <td>
-      <div class="table-image">
-        <img
-          class="mask-image"
-          src="${testsDirectory}/output/${testpassName}/${fileName}"
-          style="width:550px;height:310px;"
-          alt="description here"
-        />
-      </div>
-    </td>
+   
 
     <td>
       <p class="data-cell">90%</p>
