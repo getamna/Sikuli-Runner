@@ -1,3 +1,6 @@
+import screenshot
+testpassName = "setup"
+
 
 doubleClick("1575361507867.png")
 
@@ -29,3 +32,6 @@ keyDown(Key.CMD)
 type("R") 
 keyUp(Key.CMD) 
 
+
+#[Screenshot Here as Init]
+screenshot.save(testpassName,'canvasInitialize.png')

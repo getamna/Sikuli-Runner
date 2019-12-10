@@ -1,8 +1,7 @@
 import screenshot
 testpassName = "browser"
 
-screenshot.save(testpassName,'init.png')
-exit();
+
 # Check Canvas Rendering
 click("1575357463901.png")
 
@@ -12,13 +11,9 @@ click(mainBrowser)
 # Check Browser Element Drag and Drop
 dragDrop(mainBrowser,Location(mainBrowser.x + 100, mainBrowser.y + 100)) #drag it around
 
-screenshot.save('init.png')
 
-
-
-
-#[Screenshot Here as Init]
-
+#[Screenshot Here when Dragging Browser]
+screenshot.save(testpassName,"dragBrowser.png")
 
 #Visit a New Url
 searchBar = find("1575358059138.png")
@@ -28,8 +23,10 @@ dragDrop(mainBrowser,Location(mainBrowser.x - 50, mainBrowser.y + 100)) #drag it
 wait(2)
 
 #[Screenshot Here as Second Tab]
+screenshot.save(testpassName,"browserOpenUrl.png")
 
 click(searchBar)
+
 type("https://news.ycombinator.com" + Key.ENTER)
 wait(1)
 ycombinator = find("1575359360440.png")
@@ -43,15 +40,15 @@ dragDrop(ycombinator,Location(ycombinator.x + 500, ycombinator.y - 150))
 wait(2)
 
 #[Screenshot Here as Drag And Create New Browser]
+screenshot.save(testpassName,"browserDragTab.png")
+
 draggedTab = find("1575527747812.png")
 # Check that Browser Swap Works as Expected
 doubleClick(draggedTab)
-#[Screenshot Here that browser was swapped]
-
 
 
 #[Screenshot Here with Swap]
-
+screenshot.save(testpassName,"tabswap.png")
 
 canvasCorner = find(Pattern("1575520889022.png").targetOffset(0,17))
 
@@ -75,6 +72,10 @@ click(newBrowser)
 wait(1)
 browserCorner = find("1575526137842.png")
 dragDrop(browserCorner,Location(browserCorner.x - 50, browserCorner.y + 100)) 
+
+wait(1)
+#[Screenshot here with resize]
+screenshot.save(testpassName,"browserResize.png")
 
 # Refresh the View and Check if it Persists
 
