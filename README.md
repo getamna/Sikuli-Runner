@@ -6,7 +6,7 @@ Visual Test Framework using Sikuli and Node for End to End Testing. Outputs are 
 
 - Make sure all [Sikuli Prequisites](http://sikulix.com/quickstart/) are met (Java, GUI OS, Etc.) 
 - Will take over your computer as it performs the actions and tests as defined
-- Still a works in progress. Runs locally on your computer
+- Still a works in progress. Runs locally on your computer. There is a few seconds of delay between running testpasses
 
 
 ### Usage
@@ -28,7 +28,11 @@ You can change the order in which tests execute by editing the order of tests in
 
 1. Create Sikuli Sripts using the Sikuli IDE. You can clone this repo and open the sikuli jar-file. If it's your first time with Sikuli - use this [tutorial](http://doc.sikuli.org/tutorials/sliders/sliders.html) to get familiar with the language. Make sure to save your scripts in the provided `.sikuli` format
 
-2. In your Sikuli Script add the two lines at the start:
+
+2. Copy the screenshot.sikuli folder to your directory that contains all of your sikuli scripts
+
+
+3. In your Sikuli Script add the two lines at the start:
 
 ```python
 import screenshot
@@ -36,16 +40,17 @@ testpassName = "<the name of your testpass>"
 ```
 The screenshot module will be available during runtime
 
-3. Everytime you need to take a screenshot call the `screenshot.save` method with the testpass name and image name
+4. Everytime you need to take a screenshot call the `screenshot.save` method with the testpass name and image name
 
 ```python
-screenshot.save(testpassName,"dragBrowser.png")
+screenshot.save(testpassName,"dragRect.png")
 ```
 
-4. Point Sikuli Runner to the containing directory of your sikuli scripts and run them. You can add a sikuli.json in this directory to modify the execution order
+
+5. Point Sikuli Runner to the containing directory of your sikuli scripts and run them. You can add a sikuli.json in this directory to modify the execution order
 
 ```
-node main.js --d ./examples --baseline
-node main.js --d ./examples 
+node main.js -d "./example" --baseline
+node main.js -d ./examples 
 ```
 
