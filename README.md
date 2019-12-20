@@ -8,10 +8,10 @@ Watch the [demo video](https://github.com/rlingineni/Sikuli-Runner/blob/master/s
 
 Interested in a hosted version? Upvote this [issue](https://github.com/rlingineni/Sikuli-Runner/issues).
 
-### Prerequisites
+### Things to know
 
 - Make sure all [Sikuli Prequisites](http://sikulix.com/quickstart/) are met (Java, GUI based OS, Etc.) 
-- Will take over your computer as it performs the actions and tests as defined
+- Sikuli will take over your computer as it performs the tests
 - Runs locally on your computer. There is a few seconds of delay between running testpasses
 
 ### Usage
