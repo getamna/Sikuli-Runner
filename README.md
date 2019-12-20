@@ -1,8 +1,10 @@
 # Sikuli-Runner
 
-Visual Test Framework using Sikuli and Node for End to End Testing. Outputs are provided as a [formatted HTML](https://htmlpreview.github.io/?https://github.com/rlingineni/Sikuli-Runner/blob/master/example/output.html)  that shows your existing output images next to your baseline images. This is still a works in progress - and image compare needs to added.
+Visual Test Framework using Sikuli and Node for End to End Testing. Super useful for non-browser related work or full on interaction testing. Outputs are provided as a [formatted HTML](https://htmlpreview.github.io/?https://github.com/rlingineni/Sikuli-Runner/blob/master/example/output.html)  that shows your existing output images next to your baseline images. This is still a works in progress -  image compare needs to added.
 
-Watch the [demo video](https://github.com/rlingineni/Sikuli-Runner/blob/master/sikuli-runner-demo.mov) for help.
+You can read about [Sikuli](http://sikulix.com/#home1) here.
+
+Watch the [demo video](https://github.com/rlingineni/Sikuli-Runner/blob/master/sikuli-runner-demo.mov) to see how it in action.
 
 Interested in a hosted version? Upvote this [issue](https://github.com/rlingineni/Sikuli-Runner/issues).
 
