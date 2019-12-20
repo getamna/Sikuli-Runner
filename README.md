@@ -58,7 +58,7 @@ screenshot.save(testpassName,"dragRect.png")
 5. Point Sikuli Runner to the containing directory of your sikuli scripts and run them. You can add a sikuli.json in this directory to modify the execution order
 
 ```
-node main.js -d "./example" --baseline
-node main.js -d ./examples 
+node main.js -d "example" --baseline
+node main.js -d "examples"
 ```
 
