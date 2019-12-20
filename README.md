@@ -1,5 +1,3 @@
-![alt text](https://github.com/rlingineni/Sikuli-Runner/blob/master/logo.png)
-
 # Sikuli-Runner
 
 Visual Test Framework using Sikuli and Node for End to End Testing. Super useful for non-browser related work or full on interaction testing. Outputs are provided as a [formatted HTML](https://htmlpreview.github.io/?https://github.com/rlingineni/Sikuli-Runner/blob/master/example/output.html) table that shows your existing output images next to your baseline images. This is still a works in progress -  image compare needs to added.
@@ -65,7 +63,9 @@ node main.js -d "example"
 ```
 
 ## To-Do
-[ ] Add an Image Compare Library to give a certain Match % and say Pass/Fail
-[ ] Ability to run custom javascript scripts during a testpass (e.g. go get the diagnostic logs at that point in time)
-[ ] Create tests for sikuli runner
-[ ] Build a landing page website
+- [ ] Add an Image Compare Library to give a certain Match % and say Pass/Fail
+- [ ] Ability to run custom javascript scripts during a testpass (e.g. go get the diagnostic logs at that point in time)
+- [ ] Create tests for sikuli runner
+- [ ] Build a landing page website
+
+![alt text](https://github.com/rlingineni/Sikuli-Runner/blob/master/logo.png)
