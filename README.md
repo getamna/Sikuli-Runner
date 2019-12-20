@@ -28,9 +28,7 @@ node main.js -d "example" --baseline
 node main.js -d "example" 
 ```
 
-You can change the order in which tests execute by editing the order of tests by having a `sikuli.json` - which defines the order of testpass execution and additional config options. 
-
-Here is an [example](https://github.com/rlingineni/Sikuli-Runner/blob/master/example/sikuli.json). 
+You can change the order in which tests execute by editing the order of tests by having a `sikuli.json` - which defines the order of testpass execution and additional config options. Here is an [example config](https://github.com/rlingineni/Sikuli-Runner/blob/master/example/sikuli.json). 
 
 To write your own tests keep reading.
 
