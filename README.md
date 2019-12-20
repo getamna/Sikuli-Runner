@@ -8,7 +8,7 @@ Interested in a hosted version? Upvote this [issue](https://github.com/rlinginen
 
 ### Prerequisites
 
-- Make sure all [Sikuli Prequisites](http://sikulix.com/quickstart/) are met (Java, GUI OS, Etc.) 
+- Make sure all [Sikuli Prequisites](http://sikulix.com/quickstart/) are met (Java, GUI based OS, Etc.) 
 - Will take over your computer as it performs the actions and tests as defined
 - Runs locally on your computer. There is a few seconds of delay between running testpasses
 
