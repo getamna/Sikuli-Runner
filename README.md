@@ -37,8 +37,10 @@ To write your own tests keep reading.
 1. Create Sikuli Sripts using the Sikuli IDE. You can clone this repo and open the sikuli jar-file. If it's your first time with Sikuli - use this [tutorial](http://doc.sikuli.org/tutorials/sliders/sliders.html) to get familiar with it. Make sure to save your scripts in the provided `.sikuli` format
 
 
-2. Copy the screenshot.sikuli folder to your tests directory that contains all of your .sikuli directories
-
+2. Intialize a Sikuli Runner Directory - this will add the screenshot library and empty sikuli.json file
+```
+sikuli-runner --init "directoryname"
+```
 
 3. In your Sikuli Script add the two lines at the start:
 
