@@ -20,12 +20,12 @@ Interested in a hosted version? Upvote this [issue](https://github.com/rlinginen
 Run sikuli-runner against your tests directory
 
 ```
-node main.js -d "example" --baseline
+sikuli-runner -d "example" --baseline
 ```
 
 ##### Save Normal Screenshots
 ```
-node main.js -d "example" 
+sikuli-runner -d "example" 
 ```
 
 You can change the order in which tests execute by editing the order of tests by having a `sikuli.json` - which defines the order of testpass execution and additional config options. Here is an [example config](https://github.com/rlingineni/Sikuli-Runner/blob/master/example/sikuli.json). 
@@ -37,8 +37,10 @@ To write your own tests keep reading.
 1. Create Sikuli Sripts using the Sikuli IDE. You can clone this repo and open the sikuli jar-file. If it's your first time with Sikuli - use this [tutorial](http://doc.sikuli.org/tutorials/sliders/sliders.html) to get familiar with it. Make sure to save your scripts in the provided `.sikuli` format
 
 
-2. Copy the screenshot.sikuli folder to your tests directory that contains all of your .sikuli directories
-
+2. Intialize a Sikuli Runner Directory - this will add the screenshot library and empty sikuli.json file
+```
+sikuli-runner --init "directoryname"
+```
 
 3. In your Sikuli Script add the two lines at the start:
 
