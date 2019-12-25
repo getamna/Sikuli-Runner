@@ -1,12 +1,16 @@
 {
-  "name": "sikulijs",
+  "name": "sikuli-runner",
   "version": "1.0.0",
   "description": "Visual Test Framework for Sikuli in JS",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "preferGlobal": true,
+  "directories": {
+    "bin": "./bin"
+  },
+  "author": "rlingineni",
   "license": "MIT",
   "dependencies": {
     "alert-node": "^2.0.3",
