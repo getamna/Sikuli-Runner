@@ -63,7 +63,7 @@ node main.js -d "example"
 ```
 
 ## To-Do
-- [ ] Add an Image Compare Library to give a certain Match % and say Pass/Fail
+- [X] Add an Image Compare Library to give a certain Match % and say Pass/Fail
 - [ ] Ability to run custom javascript scripts during a testpass (e.g. go get the diagnostic logs at that point in time)
 - [ ] Create tests for sikuli runner
 - [ ] Build a landing page website
