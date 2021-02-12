@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "alert-node": "^2.0.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsdom": "^15.2.1",
     "mvdir": "^1.0.17",
     "opts": "^1.2.7",
